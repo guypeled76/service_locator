@@ -5,7 +5,7 @@ description: A starting point for Dart libraries or applications.
 # author: guy.p <guy.p@taboola.com>
 
 environment:
-  sdk: '>=2.4.0 <3.0.0'
+  sdk: '>=2.1.0 <3.0.0'
 
 #dependencies:
 #  path: ^1.6.0
