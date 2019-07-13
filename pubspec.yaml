@@ -1,6 +1,7 @@
 name: service_locator
 description: Provides service locator pattern implementation for dart.
 version: 1.0.0
+homepage: https://github.com/guypeled76
 author: Guy Peled <guypeled76@gmail.com>
 
 environment:
