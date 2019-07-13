@@ -1,5 +1,5 @@
 name: service_locator
-description: A starting point for Dart libraries or applications.
+description: Provides service locator pattern implementation for dart.
 version: 1.0.0
 author: Guy Peled <guypeled76@gmail.com>
 

@@ -1,7 +1,4 @@
-A library for Dart developers.
-
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+Provides service locator pattern implementation for dart.
 
 ## Usage
 
@@ -11,12 +8,18 @@ A simple usage example:
 import 'package:service_locator/service_locator.dart';
 
 main() {
-  var awesome = new Awesome();
+
+  ServiceContainer container = ServiceContainer();
+  container.add(AuthService());
+  ServiceContainer scope = ServiceContainer(parent: container);
+  scope.add(HttpService());
+
+
+  AuthService authService = scope.get<AuthService>();
+  HttpService httpService = scope.get<HttpService>();
+
+
 }
+
 ```
 
-## Features and bugs
-
-Please file feature requests and bugs at the [issue tracker][tracker].
-
-[tracker]: http://example.com/issues/replaceme
