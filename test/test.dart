@@ -1,16 +1,19 @@
 import 'package:service_locator/service_locator.dart';
 import 'package:test/test.dart';
 
+import 'services/auth.dart';
+
 void main() {
   group('A group of tests', () {
-    Awesome awesome;
+    ServiceContainer container;
 
     setUp(() {
-      awesome = Awesome();
+      container = ServiceContainer();
+      container.add(AuthService());
     });
 
     test('First Test', () {
-      expect(awesome.isAwesome, isTrue);
+      expect(container.get<AuthService>(), isNotNull);
     });
   });
 }
